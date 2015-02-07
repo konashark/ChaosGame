@@ -1,0 +1,99 @@
+<html lang="en">
+<!doctype html>
+	<head>
+		<meta charset="UTF-8">
+		<title>The Chaos Game</title>
+        <link rel="stylesheet" type="text/css" href="./libs/dhtmlxslider.css"/>
+        <script src="./libs/dhtmlxslider.js"></script>
+
+        <style>
+            #titleBox {
+                position: absolute;
+                left: 3%;
+                top: 20px;
+                width: 170px;
+                height: 125px;
+                padding: 15px;
+                padding-top: 5px;
+                background-color: #e0e0f0;
+                opacity: 1;
+                font-size: 12px;
+                font-family: Tahoma;
+                border: black solid 1px;
+                text-align: center;
+            }
+            #controlPane {
+                position: absolute;
+                left: 3%;
+                top: 180px;
+                width: 170px;
+                height: 405px;
+                padding: 15px;
+                background-color: #e0e0f0;
+                opacity: 1;
+                font-size: 12px;
+                font-family: Tahoma;
+                border: black solid 1px;
+            }
+            .buttons {
+                width: 170px;
+                height: 30px;
+                left: 15px;
+                margin-top: 5px;
+            }
+            #startBtn {
+                font-size: 14pt;
+            }
+            #sliderPoly, #sliderRad, #sliderPoints, #sliderSpeed {
+                width: 120px;
+                height: 30px;
+            }
+            table.demo_table td {
+                text-align: left;
+                vertical-align: top;
+                padding-right: 10px;
+            }
+
+        </style>
+    </head>
+	<body>
+		<div id='screen' style="position: absolute; top: 0%; left: 0%; width: 100%; height: 100%">
+			<canvas id="canvas">
+ 				Your browser does not support HTML 5 Canvas. 
+			</canvas>
+            <div id='titleBox'>
+                <h1>Chaos Plotter</h1>
+                <h4>By Jeff Sprague</h4>
+                <h3><a href="http://www.wildlizardranch.com">WildLizardRanch.com</a></h3>
+            </div>
+            <div id='controlPane'>
+                <table cellspacing="0" cellpadding="0" border="0" class="demo_table">
+                    <tr><td>Polygon</td></tr>
+                    <tr>
+                        <td><div id="sliderPoly" linkto="sliderPolyLink"></div></td>
+                        <td><div id="sliderPolyLink"></div></td>
+                    </tr><td>Radius</td><tr>
+                        <td><div id="sliderRad"></div></td>
+                        <td><div id="sliderRadLink">1/2</div></td>
+                    </tr><td>Points</td><tr>
+                        <td><div id="sliderPoints"></div></td>
+                        <td><div id="sliderPointsLink">10000</div></td>
+                    </tr><td>Speed</td><tr>
+                        <td><div id="sliderSpeed"></div></td>
+                        <td><div id="sliderSpeedLink">Fast</div></td>
+                    </tr>
+                </table>
+                <button id='startBtn' class='buttons'>START</button>
+                <button id='demo1' class='buttons'>Demo 1 (p=3, r=1/2)</button>
+                <button id='demo2' class='buttons'>Demo 2 (p=4, r=2/5)</button>
+                <button id='demo3' class='buttons'>Demo 3 (p=5, r=3/8)</button>
+                <button id='demo4' class='buttons'>Demo 4 (p=6, r=1/3)</button>
+                <button id='demo5' class='buttons'>Demo 5 (p=12, r=1/4)</button>
+            </div>
+		</div>
+        <script src="chaos.js"></script>
+	</body>
+</html>
+
+
+
