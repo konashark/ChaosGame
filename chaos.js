@@ -110,13 +110,13 @@ function start () {
         var i;
 
         if (g.SPEED === 'Fast') {
-            var begin = performance.now();
+            //var begin = performance.now();
             for (i = 0; i < g.POINTS; i++) {
                 plotPoint(verts, rad);
             }
-            var end = performance.now();
-            var delta = end - begin;
-            console.log("Plotted " + g.POINTS + " points in " + delta + "ms (" + (1000/delta* g.POINTS) + " points per second!)");
+            //var end = performance.now();
+            //var delta = end - begin;
+            //console.log("Plotted " + g.POINTS + " points in " + delta + "ms (" + (1000/delta* g.POINTS) + " points per second!)");
             if (callback) {
                 callback();
             }
